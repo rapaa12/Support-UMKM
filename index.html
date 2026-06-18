@@ -1,51 +1,293 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support UMKM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support UMKM</title>
 
-  <link rel="stylesheet" href="style.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#1e293b;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(10px);
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+    gap:10px;
+}
+
+.logo-mark{
+    width:45px;
+    height:45px;
+    border-radius:12px;
+    background:#22c55e;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.logo-text{
+    color:#111;
+    font-size:24px;
+    font-weight:700;
+}
+
+.logo-text span{
+    color:#22c55e;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+nav a{
+    text-decoration:none;
+    color:#334155;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#22c55e;
+}
+
+.nav-cta{
+    background:#22c55e;
+    color:white;
+    padding:10px 20px;
+    border-radius:30px;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:120px 8% 50px;
+    background:linear-gradient(135deg,#f0fdf4,#dcfce7);
+}
+
+.hero-content{
+    max-width:600px;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:10px 18px;
+    background:white;
+    border-radius:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero h1 em{
+    color:#22c55e;
+    font-style:normal;
+}
+
+.hero p{
+    font-size:18px;
+    color:#64748b;
+    margin-bottom:30px;
+}
+
+.hero-actions{
+    display:flex;
+    gap:15px;
+}
+
+.btn-primary,
+.btn-secondary{
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:30px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#22c55e;
+    color:white;
+}
+
+.btn-secondary{
+    border:2px solid #22c55e;
+    color:#22c55e;
+    background:white;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover{
+    transform:translateY(-3px);
+}
+
+.hero-image{
+    width:500px;
+    height:500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* STATS */
+.stats{
+    display:flex;
+    gap:40px;
+    margin-top:50px;
+}
+
+.stats h3{
+    color:#22c55e;
+    font-size:32px;
+}
+
+.stats p{
+    margin-top:5px;
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:150px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero-actions{
+        justify-content:center;
+    }
+
+    .hero-image{
+        width:100%;
+        max-width:400px;
+        margin-top:40px;
+    }
+
+    .stats{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+}
+</style>
 </head>
 <body>
 
-<header id="header">
-  <a href="index.html" class="logo">
-    <div class="logo-mark">F</div>
-    <span class="logo-text">Support<span>UMKM</span></span>
-  </a>
+<header>
+    <a href="#" class="logo">
+        <div class="logo-mark">F</div>
+        <span class="logo-text">Support<span>UMKM</span></span>
+    </a>
 
-  <nav>
-    <a href="index.html">Beranda</a>
-    <a href="fitur.html">Fitur</a>
-    <a href="produk.html">Produk</a>
-    <a href="tentang.html">Tentang</a>
-    <a href="daftar.html" class="nav-cta">Daftar</a>
-  </nav>
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Fitur</a>
+        <a href="#">Produk</a>
+        <a href="#">Tentang</a>
+        <a href="#" class="nav-cta">Daftar</a>
+    </nav>
 </header>
-<h1>TEST DARI AKU</h1>
+
 <section class="hero">
-  <div class="hero-content">
-    <div class="hero-badge">🌿 Platform UMKM #1 di Indonesia</div>
 
-    <h1>Tumbuh Bersama <em>UMKM</em> Indonesia</h1>
+    <div class="hero-content">
 
-    <p>
-      Platform digital terpadu untuk membantu pelaku usaha kecil berkembang.
-    </p>
+        <div class="hero-badge">
+            🌿 Platform UMKM #1 di Indonesia
+        </div>
 
-    <div class="hero-actions">
-      <a href="daftar.html" class="btn-primary">
-        Daftar Sekarang !
-      </a>
+        <h1>
+            Tumbuh Bersama
+            <em>UMKM Indonesia</em>
+        </h1>
 
-      <a href="fitur.html" class="btn-secondary">
-        Lihat Fiturr
-      </a>
+        <p>
+            Platform digital terpadu untuk membantu pelaku usaha kecil
+            berkembang, memperluas pasar, dan meningkatkan penjualan
+            secara lebih mudah.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#" class="btn-primary">Daftar Sekarang</a>
+            <a href="#" class="btn-secondary">Lihat Fitur</a>
+        </div>
+
+        <div class="stats">
+            <div>
+                <h3>10K+</h3>
+                <p>UMKM Bergabung</p>
+            </div>
+
+            <div>
+                <h3>500+</h3>
+                <p>Kota Terjangkau</p>
+            </div>
+
+            <div>
+                <h3>98%</h3>
+                <p>Kepuasan Pengguna</p>
+            </div>
+        </div>
+
     </div>
-  </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800" alt="UMKM">
+    </div>
+
 </section>
 
-<script src="script.js"></script>
 </body>
 </html>
