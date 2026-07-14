@@ -4,53 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar UMKM</title>
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="daftar.css">
 </head>
-
 <body>
 
-<section class="section">
+<div class="container">
+    <div class="card">
+        <h1>Daftar UMKM</h1>
 
-    <div class="register-container">
-
-        <h2 class="section-title">
-            Daftar UMKM
-        </h2>
-
-        <p class="section-sub">
-            Bergabunglah bersama ribuan UMKM Indonesia dan mulai kembangkan usaha Anda secara digital.
+        <p>
+            Bergabunglah bersama ribuan UMKM Indonesia dan mulai
+            kembangkan usaha Anda secara digital.
         </p>
 
-        <form class="register-form" id="registerForm">
-
+        <form>
             <input type="text" placeholder="Nama Lengkap" required>
 
             <input type="email" placeholder="Email" required>
 
             <input type="text" placeholder="Nama Usaha" required>
 
-            <button type="submit" class="btn-primary">
-                Daftar
-            </button>
-
+            <button type="submit">Daftar Sekarang</button>
         </form>
-
     </div>
-
-</section>
-
-<script>
-const registerForm = document.getElementById("registerForm");
-
-registerForm.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    alert("Pendaftaran berhasil!");
-
-    window.location.href = "index.html";
-});
-</script>
+</div>
 
 </body>
 </html>
